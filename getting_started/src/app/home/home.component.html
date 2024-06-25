@@ -1,0 +1,20 @@
+<!--a) String Interpolation from a string-->
+
+<p>{{greetings}}</p>
+
+<!-- String Interpolation from a function called greet-->
+
+<p>{{greet()}}</p>
+
+<!--b) Property Binding-haas to be attached to a html attribute, anabling a dynamic button-->
+<!--button [disabled]="disable">Click Me!</button-->
+
+
+<!--c)Event Binding-->
+<!--input type="text" (input)="takeInput($input)"-->
+
+<button (click)="AddName()"> Add</button> 
+
+<!--d)2 way Data Binding. It updates both ts and html side-->
+<input type="text" [(ngModel)]="text">
+<p>{{text}}</p>

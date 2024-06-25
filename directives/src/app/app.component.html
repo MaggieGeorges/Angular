@@ -1,0 +1,5 @@
+
+<!--Accessing the data we use the dolar sign with a special keyword event in custom events-->
+<app-add-people (onAdd)="addNewPerson($event)"></app-add-people>
+<app-display [people]="peoples" (onDelete)="deletePerson($event)"></app-display>
+

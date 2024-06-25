@@ -1,0 +1,60 @@
+<!--
+Directives gives us the ability to manipulate the dom dynamycally/Programatically. There are of 2 types:
+a) Structural directives -add/remove an element from the dom
+Includes:
+*ngif-displaying something dynamically based on an if condition.
+*ngfor-To loop through a list and display some elements as you loop through.
+*ngSwitch-switch case.
+b) Attributes directives -add/removes an attribute from an element.
+Includes:
+[ngStyle]-changes attributes of an element.
+[ngClass]-changes style of an element.
+[ngContent]-displays content dynamically.   
+-->
+
+<!--a)ngIf -->
+<div class="content">
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="name">
+    
+
+    <label for="name">Age</label>
+    <input type="text" [(ngModel)]="age">
+    <button (click)="add()"> Add </button>
+</div>
+
+<!--ngIf>
+<div *ngIf="people.length; else noPeople">
+    <h1> List of People </h1>
+-->
+<!--ngFor>
+    <div *ngFor="let person of people; let i=index">
+        <p>{{person.Name}}</p>
+        <p>{{person.Age}}</p>
+        <button (click)="deletedPerson(i)">Delete</button>
+    </div>
+</div>
+-->
+
+<!--<p *ngIf="!people.length"><i>List Empty, Kindly Add a Person</i></p>
+-->
+
+<ng-template #noPeople>
+    <i> List Empty, Kindly Add a Person </i>
+</ng-template>
+
+<!--ngSwitch-->
+<div [ngSwitch]="day">
+    <p *ngSwitchCase="'Tuesday'"> It's Tuesday  </p>
+    <p *ngSwitchCase="'Monday'"> It's Monday  </p>
+    <p *ngSwitchCase="'Friday'"> It's Friday  </p>
+    <p *ngSwitchDefault> Just a normal day!</p>
+</div>
+
+
+<!--Structural Directivess-->
+<!--<p [ngStyle]="{color:Showredp? 'red':'green', backgroundColor:'black' }"> Style me with Color Red and Black background</p>--> 
+
+<!--<p [ngClass]="'showred'"> Style me with Color Red and Black background</p>  -->
+
+<p [ngClass]="Showredp? 'showred':'showgreen'"> Style me with Color Red and Black background</p>  

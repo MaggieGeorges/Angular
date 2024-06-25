@@ -1,0 +1,21 @@
+<!-- 
+
+
+
+<input [(ngModel)]="searchTerm"/>
+
+<button (click)="addProduct()" >Add Keyboard</button>
+
+<div *ngFor=" let product of products |filter:searchTerm">
+  <h1>{{product.Name}}</h1>
+  <p>{{product.Description | shortenDescription : 10}}</p>
+  <p>{{product.price | currency}}</p>
+</div>  -->
+
+<!-- <p>{{greeting | async}}</p>  -->
+
+
+<app-product [products]="products">
+  <h1>My Products Page</h1>
+</app-product>
+<button (click)="addProduct()">Change</button>
